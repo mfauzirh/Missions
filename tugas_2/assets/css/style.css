@@ -4,7 +4,7 @@
 }
 
 body {
-    font-family: arial;
+    font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -35,7 +35,7 @@ header {
 
 .main {
     width: 60%;
-    margin:auto;
+    margin:0 auto 100px;
 }
 
 .highlight {
@@ -54,16 +54,13 @@ header {
     font-size: 20px;
     margin: 0 0 30px 0;
 }
-
-.main > div {
-    margin-bottom: 20px;
-}
-
 .card {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 213px;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .card .thumb {
@@ -78,7 +75,7 @@ header {
 }
 
 .card-content .description {
-    height: 55px;
+    height: 60px;
     overflow: hidden;
     margin: 10px 0;
 }
@@ -139,6 +136,7 @@ header {
     background-color: #65d777;
     cursor: pointer;
     color: white;
+    font-size: 16px;
     width: 30%;
     border: none;
     border-radius: 0 5px 5px 0;
@@ -199,6 +197,9 @@ footer .nav-bar .nav-link a:hover {
 
     .card .thumb {
         display: none;
+    }
+    #contact form button {
+        width: 40%;
     }
 }
 
