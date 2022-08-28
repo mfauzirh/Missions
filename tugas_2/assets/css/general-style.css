@@ -1,0 +1,37 @@
+.bg-gray {
+    background-color: #848698;
+}
+
+.bg-light-gray {
+    background-color: #e9ecef;
+}
+
+.text-gray {
+    color: #848698;
+}
+
+.text-black {
+    color: #000;
+}
+
+.btn {
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 1px solid #cbccd6;
+}
+
+.btn-white {
+    background-color: white;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+.text-title {
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+}
