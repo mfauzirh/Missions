@@ -1,3 +1,5 @@
+
+
 // Declare Animation
 function environtmentAnimation() {
     let midground = document.getElementById('midground');
@@ -24,11 +26,11 @@ function diverAnimation() {
 
     function step() {
         positionY = positionY + speedY;
-        if(positionY )
+        if (positionY)
 
-        if (positionY > maxYPosition || positionY < 0) {
-            speedY = speedY * (-1);
-        }
+            if (positionY > maxYPosition || positionY < 0) {
+                speedY = speedY * (-1);
+            }
         diver.style.bottom = positionY + 'px';
         window.requestAnimationFrame(step);
     }
@@ -46,17 +48,17 @@ function fishAnimation() {
     function step() {
         positionY = positionY + speedY;
 
-        if(positionY > maxYPosition) {
+        if (positionY > maxYPosition) {
             fish.style.transform = "scale(-1, 1)";
-        } else if(positionY <= 0) {
+        } else if (positionY <= 0) {
             fish.style.transform = "scale(1, 1)";
         }
-        
+
         if (positionY > maxYPosition || positionY < 0) {
             speedY = speedY * (-1);
         }
         // spaceship.style.top = positionY + 'px';
-        fish.style.right =  positionY*2 + 'px';
+        fish.style.right = positionY * 2 + 'px';
         window.requestAnimationFrame(step);
     }
 
@@ -71,17 +73,17 @@ function fish2Animation() {
     function step() {
         positionY = positionY + speedY;
 
-        if(positionY >= maxYPosition) {
+        if (positionY >= maxYPosition) {
             fish2.style.transform = "scale(1, 1)";
-        } else if(positionY <= 0) {
+        } else if (positionY <= 0) {
             fish2.style.transform = "scale(-1, 1)";
         }
-        
+
         if (positionY > maxYPosition || positionY < 0) {
             speedY = speedY * (-1);
         }
         // spaceship.style.top = positionY + 'px';
-        fish2.style.left =  positionY*2 + 'px';
+        fish2.style.left = positionY * 2 + 'px';
         window.requestAnimationFrame(step);
     }
 
@@ -96,17 +98,17 @@ function seaHorseAnimation() {
     function step() {
         positionY = positionY + speedY;
 
-        if(positionY >= maxYPosition) {
+        if (positionY >= maxYPosition) {
             seahorse.style.transform = "scale(1, 1)";
-        } else if(positionY <= 0) {
+        } else if (positionY <= 0) {
             seahorse.style.transform = "scale(-1, 1)";
         }
-        
+
         if (positionY > maxYPosition || positionY < 0) {
             speedY = speedY * (-1);
         }
         // spaceship.style.top = positionY + 'px';
-        seahorse.style.right =  positionY*2 + 'px';
+        seahorse.style.right = positionY * 2 + 'px';
         window.requestAnimationFrame(step);
     }
 
@@ -120,11 +122,11 @@ function shipAnimation() {
 
     function step() {
         positionY = positionY + speedY;
-        if(positionY )
+        if (positionY)
 
-        if (positionY > maxYPosition || positionY < 0) {
-            speedY = speedY * (-1);
-        }
+            if (positionY > maxYPosition || positionY < 0) {
+                speedY = speedY * (-1);
+            }
         ship.style.left = positionY + 'px';
         window.requestAnimationFrame(step);
     }
@@ -139,16 +141,16 @@ function jellyfishAnimation() {
 
     function step() {
         positionY = positionY + speedY;
-        if(positionY )
+        if (positionY)
 
-        if (positionY > maxYPosition || positionY < 0) {
-            speedY = speedY * (-1);
-        }
+            if (positionY > maxYPosition || positionY < 0) {
+                speedY = speedY * (-1);
+            }
         jellyfish1.style.left = positionY + 'px';
         jellyfish1.style.top = -positionY + 'px';
-        
-        jellyfish2.style.right = -positionY/2 + 'px';
-        jellyfish2.style.top = -positionY/2 + 'px';
+
+        jellyfish2.style.right = -positionY / 2 + 'px';
+        jellyfish2.style.top = -positionY / 2 + 'px';
         window.requestAnimationFrame(step);
     }
 
@@ -170,22 +172,65 @@ var txt = "The number of oceans on earth that have been explored is 57.8 percent
 var speed = 50; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter() {
-  if (counter < txt.length) {
-    document.getElementById("textContent").innerHTML += txt.charAt(counter);
-    counter++;
-    setTimeout(typeWriter, speed);
-  } 
+    if (counter < txt.length) {
+        document.getElementById("textContent").innerHTML += txt.charAt(counter);
+        counter++;
+        setTimeout(typeWriter, speed);
+    }
+}
+
+
+
+function deepOceanAppear() {
+    var counter1 = 0;
+    var speed1 = 30;
+
+    function midgroundAppear() {
+        if (counter1 < 40) {
+            document.getElementById("midground").style.height = (80 + counter1 / 2) + '%';
+            counter1++;
+            setTimeout(midgroundAppear, speed1);
+        }
+    }
+
+    var counter2 = 0;
+    var speed2 = 20;
+
+
+    function foregroundAppear() {
+        if (counter2 < 40) {
+            document.getElementById("foreground").style.height = (45 + counter2 / 2) + '%';
+            counter2++;
+            setTimeout(foregroundAppear, speed2);
+        }
+    }
+
+    var counter3 = 0;
+    var speed3 = 100;
+
+    function lightReflectionAppear() {
+        if (counter3 < 100) {
+            document.getElementById("lightReflection").style.opacity = (0 + counter3 *0.1);
+            counter3++;
+            setTimeout(lightReflectionAppear, speed3);
+        }
+    }
+
+    midgroundAppear()
+    foregroundAppear()
+    lightReflectionAppear()
 }
 
 // Move To Section
-function scrollToBottom(){
-    counter=0;
+function scrollToBottom() {
+    counter = 0;
     document.getElementById("textContent").innerHTML = '';
     var getMeTo = document.getElementById("deepOcean");
-    getMeTo.scrollIntoView({behavior: 'smooth'}, false);
+    getMeTo.scrollIntoView({ behavior: 'smooth' }, false);
+    setTimeout(deepOceanAppear, 200)
     typeWriter()
 }
-function scrollToTop(){
+function scrollToTop() {
     var getMeTo = document.getElementById("highOcean");
-    getMeTo.scrollIntoView({behavior: 'smooth'}, false);
+    getMeTo.scrollIntoView({ behavior: 'smooth' }, false);
 }
