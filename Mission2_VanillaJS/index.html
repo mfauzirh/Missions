@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mission 2 - Vanila JS</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap" rel="stylesheet">
+    <title>Mission 2 - Vanilla JS</title>
 </head>
+
 <body>
-    
+    <div class="content">
+
+        <div id="highOcean">
+            <div id="cloud"></div>
+            <img src="assets/images/ship.png" alt="ship" id="ship">
+            <a href="javascript: scrollToBottom();" id="btnTop"><img src="assets/images/btnExplore.png" alt=""></a>
+        </div>
+
+        <div id="deepOcean">
+            <div id="midground"></div>
+            <div id='foreground'></div>
+            <div id="lightReflection"></div>
+            <img src="assets/images/diver.png" alt="diver" id="diver">
+            <div id="fish">
+                <img src="assets/images/fish1.png" alt="fish1">
+                <img src="assets/images/fish1.png" alt="fish2">
+                <img src="assets/images/fish1.png" alt="fish3">
+            </div>
+
+            <div id="fish2">
+                <img src="assets/images/nemo.png" alt="nemo1">
+                <img src="assets/images/nemo.png" alt="nemo2">
+            </div>
+
+            <div id="seahorse">
+                <img src="assets/images/seahorse.png" alt="seahorse1">
+                <img src="assets/images/seahorse.png" alt="seahorse2">
+                <img src="assets/images/seahorse.png" alt="seahorse3">
+            </div>
+
+            <img src="assets/images/jellyfish.png" alt="jellyfish1" id="jellyfish1">
+            <img src="assets/images/jellyfish.png" alt="jellyfish1" id="jellyfish2">
+
+            <div id="deepContent">
+                <p id="textContent"></p>
+                <a href="javascript: scrollToTop();" id="btnBottom"><img src="assets/images/btnBack.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js" defer></script>
 </body>
+
 </html>

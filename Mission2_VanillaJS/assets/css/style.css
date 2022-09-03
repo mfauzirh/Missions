@@ -1,0 +1,260 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+#highOcean {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: 10;
+    background-image: url('../images/upsea.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#cloud {
+    height: 40%;
+    top: 0;
+    left: 0;
+    background-image: url('../images/cloud.png');
+    background-size: cover;
+    background-position: -200px 0;
+    z-index: 99;
+}
+
+#ship {
+    height: 40%;
+    background-image: url('../images/ship.png');
+    background-size: cover;
+    position: absolute;
+    bottom: 45%;
+    left: 0;
+    z-index: 1;
+    margin-left: 10%;
+}
+
+#btnTop {
+    /* background-color: white; */
+    position: absolute;
+    z-index: 999;
+    color: white;
+    bottom: 15%;
+    left: 38%;
+}
+
+#btnTop:hover {
+    filter: brightness(0.9);
+}
+
+
+#btnTop img {
+    width: 50%;
+    margin: auto;
+}
+
+/* Deep Ocean Section */
+#deepOcean {
+    background-image: linear-gradient(#1d1dda, #3636d5, #007dff);
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+#midground {
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/midground.png');
+    background-size: cover;
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#foreground {
+    width: 100%;
+    height: 65%;
+    bottom: 0;
+    left: 0;
+    background-image: url('..//images/foreground.png');
+    background-size: cover;
+    background-repeat: repeat-x;
+    position: absolute;
+    z-index: 2;
+}
+
+#lightReflection {
+    width: 100vw;
+    height: 75%;
+    top: 0;
+    left: 0;
+    background-image: url('../images/light_reflection.png');
+    background-size: cover;
+    background-repeat: repeat-x;
+    z-index: 99;
+}
+
+#diver {
+    height: 30%;
+    position: absolute;
+    bottom: 40%;
+    left: 10%;
+    z-index: 4;
+    margin-bottom: 3%;
+}
+
+#fish {
+    height: 5%;
+    position: absolute;
+    bottom: 30%;
+    right: 20px;
+    z-index: 5;
+}
+
+#fish img:nth-child(2) {
+    height: 80%;
+}
+
+#fish img:nth-child(3) {
+    height: 50%;
+}
+
+#fish2 {
+    height: 5%;
+    position: absolute;
+    top: 10%;
+    left: 20px;
+    z-index: 5;
+    transform: scale(-1, 1);
+}
+
+#fish2 img:nth-child(1) {
+    height: 50%;
+}
+
+
+#seahorse {
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    z-index: 5;
+    transform: scale(-1, 1);
+    margin-right: 40%;
+}
+
+
+#seahorse img:nth-child(1) {
+    height: 50%;
+}
+
+#seahorse img:nth-child(2) {
+    height: 50%;
+}
+
+#seahorse img:nth-child(3) {
+    height: 70%;
+}
+
+
+#jellyfish1 {
+    position: absolute;
+    height: 10%;
+    top: 10%;
+    left: 30%;
+    rotate: 30;
+    transform: rotate(20deg);
+    margin-left: 20%;
+    margin-top: 20%;
+    z-index: 10;
+}
+
+#jellyfish2 {
+    position: absolute;
+    height: 10%;
+    top: 10%;
+    right: 30%;
+    rotate: 30;
+    transform: rotate(20deg);
+    margin-right: 45%;
+    margin-top: 30%;
+    z-index: 1;
+}
+
+#deepContent {
+    width: 386px;
+    height: 360px;
+    position: absolute;
+    right: 10%;
+    bottom: 30%;
+    z-index: 999;
+    /* background-color: white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/container.png');
+    background-size: cover;
+    display: flex;
+}
+
+#deepContent p {
+    font-size: 16px;
+    color: white;
+    margin-top: 50px;
+    width: 60%;
+}
+
+#btnBottom {
+    /* background-color: white; */
+    position: absolute;
+    z-index: 999;
+    color: white;
+    bottom: 0;
+    left: 30%;
+}
+
+#btnBottom:hover {
+    filter: brightness(0.9);
+}
+
+#btnBottom img {
+    width: 60%;
+    margin: auto;
+    
+    margin-top: 200px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #btnTop {
+        width: 100%;
+        left: 30%;
+    }
+    #deepContent {
+        width: 286px;
+        height: 260px;
+    }
+
+    #deepContent p{
+        font-size: 12px;
+    }   
+
+}
+
+@media only screen and (max-height: 720) {
+    #deepContent {
+        width: 286px;
+        height: 260px;
+        bottom: 0;
+    }
+}
